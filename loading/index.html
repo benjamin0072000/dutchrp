@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DutchRP – Loading</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+        url("../background.jpg");
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .container {
+      text-align: center;
+      max-width: 600px;
+      width: 90%;
+    }
+
+    .logo {
+      max-width: 280px;
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+    }
+
+    .tip {
+      font-size: 0.95rem;
+      color: #cbd5f5;
+      margin-bottom: 30px;
+    }
+
+    .progress {
+      width: 100%;
+      height: 10px;
+      background: #1e293b;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .bar {
+      width: 0%;
+      height: 100%;
+      background: #2563eb;
+      animation: load 6s infinite;
+    }
+
+    @keyframes load {
+      0% { width: 0%; }
+      100% { width: 100%; }
+    }
+
+    footer {
+      margin-top: 25px;
+      font-size: 0.8rem;
+      color: #94a3b8;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <img src="../logo.png" alt="DutchRP Logo" class="logo">
+
+    <h1>Loading DutchRP</h1>
+    <p class="tip">Tip: Stay in character at all times on the server.</p>
+
+    <div class="progress">
+      <div class="bar"></div>
+    </div>
+
+    <footer>
+      dutchrp.fun • discord.dutchrp.fun
+    </footer>
+  </div>
+
+</body>
+</html>
