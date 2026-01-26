@@ -28,7 +28,7 @@
     }
 
     .logo {
-      max-width: 260px;
+      max-width: 420px;
       margin-bottom: 25px;
     }
 
@@ -112,13 +112,26 @@
       "Calling backup (nobody responds)…",
       "Polishing police lights… wee woo wee woo 🚓",
       "Connecting via Dutch internet speeds…",
+      "Sending a Tikkie for €0,15",
+      "Searching for the Weed NPC",
+      "Starting a coinflip with !flip",
+      "Turning the server on and off again…",
+      "Waiting for the fiets to start working…",
+      "Checking if the weather is still raining…",
+      "Putting the frikandel in the broodje…",
+      "Complaining about the weather… again…",
+      "Calling mom because it does not work…",
+      "Server is being very gezellig right now…",
+      "Turning left, no wait… rechts…",
+      "Still loading… just one more momentje…",
+      "Waiting for someone to say ‘ik was hier eerst’…"
       "Almost ready… probably…"
     ];
 
     const status = document.getElementById("status");
     setInterval(() => {
       status.textContent = messages[Math.floor(Math.random() * messages.length)];
-    }, 2500);
+    }, 5000);
 
     /* Mute knop */
     const audio = document.getElementById("music");
