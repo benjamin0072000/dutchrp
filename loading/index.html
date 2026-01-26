@@ -123,6 +123,15 @@
     /* Mute knop */
     const audio = document.getElementById("music");
     const muteBtn = document.getElementById("mute");
+    // Start music on first user interaction (browser fix)
+document.body.addEventListener("click", () => {
+  audio.play().catch(() => {});
+}, { once: true });
+
+// GMod auto-play fallback
+window.addEventListener("load", () => {
+  audio.play().catch(() => {});
+});
 
     function toggleMusic() {
       audio.muted = !audio.muted;
