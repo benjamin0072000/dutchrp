@@ -25,6 +25,7 @@
       text-align: center;
       max-width: 600px;
       width: 90%;
+      transform: scale(1.5);
     }
 
     .logo {
@@ -59,15 +60,6 @@
       100% { transform: rotate(360deg); }
     }
 
-    #mute {
-      margin-top: 20px;
-      padding: 8px 16px;
-      background: #1e293b;
-      color: #fff;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-    }
 
     footer {
       margin-top: 30px;
@@ -86,7 +78,6 @@
     <div class="spinner"></div>
     <div id="status">Asking server nicely to start…</div>
 
-    <button id="mute" onclick="toggleMusic()">🔊 Mute</button>
 
     <footer>
       dutchrp.fun • discord.dutchrp.fun
@@ -135,7 +126,6 @@
 
     /* Mute knop */
     const audio = document.getElementById("music");
-    const muteBtn = document.getElementById("mute");
     // Start music on first user interaction (browser fix)
 document.body.addEventListener("click", () => {
   audio.play().catch(() => {});
@@ -146,10 +136,6 @@ window.addEventListener("load", () => {
   audio.play().catch(() => {});
 });
 
-    function toggleMusic() {
-      audio.muted = !audio.muted;
-      muteBtn.textContent = audio.muted ? "🔇 Unmute" : "🔊 Mute";
-    }
   </script>
 
 </body>
