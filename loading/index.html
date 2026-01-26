@@ -15,10 +15,10 @@
       background-size: cover;
       background-position: center;
       color: #fff;
+      height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 100vh;
     }
 
     .container {
@@ -29,7 +29,7 @@
 
     .logo {
       max-width: 260px;
-      margin-bottom: 30px;
+      margin-bottom: 25px;
     }
 
     h1 {
@@ -37,9 +37,9 @@
     }
 
     #status {
+      margin: 15px 0 25px;
       font-size: 1rem;
       color: #cbd5f5;
-      margin: 20px 0;
       min-height: 1.4em;
     }
 
@@ -59,6 +59,16 @@
       100% { transform: rotate(360deg); }
     }
 
+    #mute {
+      margin-top: 20px;
+      padding: 8px 16px;
+      background: #1e293b;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
     footer {
       margin-top: 30px;
       font-size: 0.8rem;
@@ -76,12 +86,20 @@
     <div class="spinner"></div>
     <div id="status">Asking server nicely to start…</div>
 
+    <button id="mute" onclick="toggleMusic()">🔊 Mute</button>
+
     <footer>
       dutchrp.fun • discord.dutchrp.fun
     </footer>
   </div>
 
+  <!-- Muziek -->
+  <audio id="music" autoplay loop>
+    <source src="loading.ogg" type="audio/ogg">
+  </audio>
+
   <script>
+    /* Nederenglish teksten */
     const messages = [
       "Downloading very legal content…",
       "Asking the server nicely to behave…",
@@ -92,21 +110,24 @@
       "Installing extra roleplay…",
       "Loading scripts that definitely won’t break…",
       "Calling backup (nobody responds)…",
-      "Reading the rules (you did read them, right?)",
       "Polishing police lights… wee woo wee woo 🚓",
-      "This takes longer than expected, typisch…",
-      "Connecting to Dutch internet speeds…",
+      "Connecting via Dutch internet speeds…",
       "Almost ready… probably…"
     ];
 
     const status = document.getElementById("status");
+    setInterval(() => {
+      status.textContent = messages[Math.floor(Math.random() * messages.length)];
+    }, 2500);
 
-    function changeText() {
-      const random = Math.floor(Math.random() * messages.length);
-      status.textContent = messages[random];
+    /* Mute knop */
+    const audio = document.getElementById("music");
+    const muteBtn = document.getElementById("mute");
+
+    function toggleMusic() {
+      audio.muted = !audio.muted;
+      muteBtn.textContent = audio.muted ? "🔇 Unmute" : "🔊 Mute";
     }
-
-    setInterval(changeText, 2500);
   </script>
 
 </body>
