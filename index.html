@@ -4,14 +4,123 @@
   <meta charset="UTF-8">
   <title>DutchRP</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(135deg, #0f172a, #020617);
+      color: #e5e7eb;
+    }
+
+    header {
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #cbd5f5;
+    }
+
+    .buttons {
+      margin-top: 30px;
+    }
+
+    .buttons a {
+      display: inline-block;
+      margin: 10px;
+      padding: 15px 30px;
+      background: #2563eb;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.2s;
+    }
+
+    .buttons a:hover {
+      background: #1e40af;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: #020617;
+      border: 1px solid #1e293b;
+      border-radius: 12px;
+      padding: 25px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 0.9rem;
+      color: #94a3b8;
+    }
+  </style>
 </head>
 <body>
-  <h1>Welcome to DutchRP</h1>
-  <p>Official Garry's Mod DarkRP server</p>
 
-  <ul>
-    <li><a href="https://discord.dutchrp.fun">Discord</a></li>
-    <li><a href="https://shop.dutchrp.fun">Shop</a></li>
-  </ul>
+  <header>
+    <h1>DutchRP</h1>
+    <p>Official Garry’s Mod DarkRP server</p>
+
+    <div class="buttons">
+      <a href="https://discord.dutchrp.fun">Join Discord</a>
+      <a href="https://shop.dutchrp.fun">Open Shop</a>
+    </div>
+  </header>
+
+  <section>
+    <h2>Why DutchRP?</h2>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Serious Roleplay</h3>
+        <p>High quality roleplay with clear rules and active staff.</p>
+      </div>
+
+      <div class="card">
+        <h3>Active Community</h3>
+        <p>Daily players, events and a friendly Dutch / EU community.</p>
+      </div>
+
+      <div class="card">
+        <h3>Custom Systems</h3>
+        <p>Custom jobs, vehicles, police systems and balanced gameplay.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>How to join</h2>
+    <p>
+      Open Garry’s Mod → Multiplayer → Console (<code>~</code>) → type:
+    </p>
+    <p><strong>connect play.dutchrp.fun</strong></p>
+  </section>
+
+  <footer>
+    © 2026 DutchRP — All rights reserved
+  </footer>
+
 </body>
 </html>
