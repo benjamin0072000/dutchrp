@@ -33,33 +33,34 @@
     }
 
     h1 {
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
 
     #status {
-      font-size: 0.95rem;
+      font-size: 1rem;
       color: #cbd5f5;
-      margin-bottom: 25px;
-      min-height: 1.2em;
+      margin: 20px 0;
+      min-height: 1.4em;
     }
 
-    .progress {
-      width: 100%;
-      height: 12px;
-      background: #1e293b;
-      border-radius: 10px;
-      overflow: hidden;
+    /* Spinner */
+    .spinner {
+      width: 70px;
+      height: 70px;
+      border: 6px solid rgba(255,255,255,0.2);
+      border-top: 6px solid #60a5fa;
+      border-radius: 50%;
+      margin: 0 auto;
+      animation: spin 1s linear infinite;
     }
 
-    .bar {
-      width: 0%;
-      height: 100%;
-      background: linear-gradient(90deg, #2563eb, #60a5fa);
-      transition: width 0.4s ease;
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
     }
 
     footer {
-      margin-top: 25px;
+      margin-top: 30px;
       font-size: 0.8rem;
       color: #94a3b8;
     }
@@ -71,11 +72,9 @@
     <img src="../DutchRPGrafLogoSmallFixed.png" alt="DutchRP Logo" class="logo">
 
     <h1>Loading DutchRP</h1>
-    <div id="status">Initializing…</div>
 
-    <div class="progress">
-      <div class="bar" id="bar"></div>
-    </div>
+    <div class="spinner"></div>
+    <div id="status">Asking server nicely to start…</div>
 
     <footer>
       dutchrp.fun • discord.dutchrp.fun
@@ -83,40 +82,31 @@
   </div>
 
   <script>
-    const bar = document.getElementById("bar");
-    const status = document.getElementById("status");
-
-    const steps = [
-      { text: "Initializing client...", target: 10, speed: 600 },
-      { text: "Downloading server content...", target: 45, speed: 900 },
-      { text: "Downloading addons...", target: 70, speed: 1200 },
-      { text: "Mounting workshop addons...", target: 85, speed: 1500 },
-      { text: "Loading map...", target: 92, speed: 2000 },
-      { text: "Almost done...", target: 100, speed: 2500 }
+    const messages = [
+      "Downloading very legal content…",
+      "Asking the server nicely to behave…",
+      "Placing cones on the road…",
+      "Waking up the burgemeester…",
+      "Still loading, grab a koffie ☕",
+      "Checking if you stay in character…",
+      "Installing extra roleplay…",
+      "Loading scripts that definitely won’t break…",
+      "Calling backup (nobody responds)…",
+      "Reading the rules (you did read them, right?)",
+      "Polishing police lights… wee woo wee woo 🚓",
+      "This takes longer than expected, typisch…",
+      "Connecting to Dutch internet speeds…",
+      "Almost ready… probably…"
     ];
 
-    let current = 0;
-    let step = 0;
+    const status = document.getElementById("status");
 
-    function nextStep() {
-      if (step >= steps.length) return;
-
-      const s = steps[step];
-      status.textContent = s.text;
-
-      const interval = setInterval(() => {
-        current++;
-        bar.style.width = current + "%";
-
-        if (current >= s.target) {
-          clearInterval(interval);
-          step++;
-          setTimeout(nextStep, 500);
-        }
-      }, s.speed / (s.target - current));
+    function changeText() {
+      const random = Math.floor(Math.random() * messages.length);
+      status.textContent = messages[random];
     }
 
-    nextStep();
+    setInterval(changeText, 2500);
   </script>
 
 </body>
