@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <title>DutchRP - Script Information</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: url("../dutchrpbackgroundsmallerdots.jpg") center/cover no-repeat fixed;
+      color: #fff;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background: rgba(0,0,0,0.6);
+      backdrop-filter: blur(6px);
+    }
+
+    .nav-links a {
+      margin-right: 25px;
+      text-decoration: none;
+      color: #ddd;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover {
+      color: #fff;
+    }
+
+    .btn-orange,
+    .card-footer {
+      background: linear-gradient(180deg, #c45a00, #8f3f00);
+      padding: 12px 20px;
+      border-radius: 6px;
+      color: #fff;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-decoration: none;
+      text-align: center;
+      cursor: pointer;
+      display: inline-block;
+    }
+
+    .btn-orange:hover,
+    .card-footer:hover {
+      background: linear-gradient(180deg, #ff7a00, #aa4b00);
+      box-shadow: 0 0 15px rgba(170, 75, 0, 0.6);
+    }
+
+    /* HERO */
+    .hero {
+      text-align: center;
+      padding: 100px 20px 80px;
+    }
+
+    .logo {
+      width: 600px;
+      max-width: 90%;
+      margin-bottom: 30px;
+    }
+
+    .title {
+      font-size: clamp(32px, 5vw, 56px);
+      font-weight: 800;
+    }
+
+    .highlight {
+      color: #AA4B00;
+    }
+
+    .subtitle {
+      margin-top: 10px;
+      color: #ccc;
+      font-size: 22px; /* 👈 bigger text */
+    }
+
+    .hero-buttons {
+      margin-top: 30px;
+    }
+
+    .hero-buttons a {
+      margin: 0 10px;
+    }
+
+    /* INFO CARDS */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+
+      max-width: 1200px;   /* 👈 ruimte links & rechts */
+      margin: 0 auto;      /* center */
+      padding: 60px 20px;  /* binnenruimte */
+    }
+
+    .card {
+      background: rgba(20,20,20,0.8);
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 0 30px rgba(0,0,0,0.6);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 260px;
+      max-height: 320px;  /* 👈 perfecte hoogte voor jouw content */
+    }
+
+    .card h3 {
+      color: #AA4B00;
+      margin-bottom: 0px;
+      margin: 0;
+    }
+
+    .card p {
+      color: #ccc;
+      font-size: 14px;
+      margin: 0;
+      line-height: 1.25; /* 👈 DIT maakt het compacter */
+    }
+
+    .card-footer {
+      margin-top: 15px;
+      padding: 12px;
+      text-align: center;
+
+      background: linear-gradient(180deg, #c45a00, #8f3f00);
+      color: #fff;
+      font-weight: 800;
+      letter-spacing: 1px;
+      border-radius: 6px;
+
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .card-footer:hover {
+      background: linear-gradient(180deg, #ff7a00, #aa4b00);
+      box-shadow: 0 0 15px rgba(170, 75, 0, 0.6);
+    }
+
+    .small-img {
+      width: 192px;      /* 👈 kleine resolutie */
+      height: auto;
+      vertical-align: middle; /* netjes naast de tekst */
+      margin-left: 6px;
+    }
+
+    .about-title {
+      display: flex;
+      align-items: center;      /* verticaal netjes */
+      justify-content: space-between;
+      gap: 15px;
+    }
+
+    .about-title .text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.0; /* nóg strakker */
+    }
+
+    .about-title .line1,
+    .about-title .line2 {
+      font-size: 22px;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .about-title .flag {
+      width: 120px;
+      height: auto;
+      flex-shrink: 0; /* 👈 super belangrijk */
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <div class="nav-links">
+      <a href="../home.html">Home</a>
+      <a href="https://discord.dutchrp.fun/" target="_blank" rel="noopener noreferrer">Discord</a>
+      <a href="../info/info.html">Info</a>
+      <a href="../rules/rules.html">Rules</a>
+      <a href="https://dutchrp.tip4serv.com/" target="_blank" rel="noopener noreferrer">Store</a>
+    </div>
+    <a href="steam://run/4000//+connect 164.152.123.222:27035/" class="btn-orange">JOIN US</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1 class="title">
+      Information about our <span class="highlight">scripts</span>
+    </h1>
+
+    <p class="subtitle">Good to know before playing!</p>
+  </section>
+
+  <!-- SCRIPT CARDS -->
+<section class="cards">
+  <div class="card">
+
+    <h3>BIND WHEEL</h3>
+
+    <div class="about-title">
+      <div class="text">
+        <span class="line1">Bind any action or command</span>
+      </div>
+    </div>
+
+    <p>
+      Open the bind wheel by pressing V. Use the default binds or customize them in the BindMenu. Release V to select and fully tailor the wheel to your playstyle.
+    </p>
+
+    <a href="scripts/bindwheel.html" class="card-footer">
+      More info
+    </a>
+  </div>
+
+  <div class="card">
+
+    <h3>FLIPS & ROLLS</h3>
+
+    <div class="about-title">
+      <div class="text">
+        <span class="line1">Coinflips and dicerolls</span>
+      </div>
+    </div>
+
+    <p>
+      Feeling lucky? Type !flip or !roll to play quick gambling games. Perfect for fast decisions… or big wins 😉
+    </p>
+
+    <a href="scripts/flips.html" class="card-footer">
+      More info
+    </a>
+  </div>
+
+  <div class="card">
+
+    <h3>GANG PARTY</h3>
+
+    <div class="about-title">
+      <div class="text">
+        <span class="line1">Create a gang and take control</span>
+      </div>
+    </div>
+
+    <p>
+      Start a gang or invite friends using !party. Team up, invite players, and dominate the streets together.
+    </p>
+
+    <a href="scripts/gangs.html" class="card-footer">
+      More info
+    </a>
+  </div>
+</section>
+<section class="cards">
+  <div class="card">
+
+    <h3>MAYOR LOTTERY</h3>
+
+    <div class="about-title">
+      <div class="text">
+        <span class="line1">Run a city lottery</span>
+      </div>
+    </div>
+
+    <p>
+      As mayor, you can easily start a lottery by typing !lottery. Set the entry price and let citizens join for a chance to win big.  
+    </p>
+
+    <a href="scripts/lottery.html" class="card-footer">
+      More info
+    </a>
+  </div>
+
+  <div class="card">
+
+    <h3>METH</h3>
+
+    <div class="about-title">
+      <div class="text">
+        <span class="line1">Produce meth and MDMA</span>
+      </div>
+    </div>
+
+    <p>
+      Set up your own drug lab using tents and machines. Buy protection like a gas mask from the Accessories NPC before you start cooking.
+    </p>
+
+    <a href="scripts/meth.html" class="card-footer">
+      More info
+    </a>
+  </div>
+
+  <div class="card">
+
+    <h3>WEED</h3>
+
+    <div class="about-title">
+      <div class="text">
+        <span class="line1">Grow and sell your own weed</span>
+      </div>
+    </div>
+
+    <p>
+      Purchase equipment via your iPad, grow your plants, and sell fresh harvests to the Dealer for easy cash.
+    </p>
+
+    <a href="scripts/weed.html" class="card-footer">
+      More info
+    </a>
+  </div>
+</section>
+</body>
+</html>
