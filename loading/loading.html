@@ -9,8 +9,7 @@
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background:
-        url("../dutchrpbackgroundsmallerdots.jpg");
+      background: url("../dutchrpbackgroundsmallerdots.jpg");
       background-size: cover;
       background-position: center;
       color: #fff;
@@ -19,15 +18,15 @@
       align-items: center;
       justify-content: center;
     }
-    
+
     .title {
-      color: #ffffff; /* wit */
+      color: #ffffff;
       font-size: 24px;
       font-weight: 800;
     }
 
     .highlight {
-      color: #AA4B00; /* jouw donker-oranje accent */
+      color: #AA4B00;
     }
 
     .container {
@@ -53,7 +52,6 @@
       min-height: 1.4em;
     }
 
-    /* Spinner */
     .spinner {
       width: 70px;
       height: 70px;
@@ -63,57 +61,54 @@
       margin: 0 auto;
       animation: spin 1s linear infinite;
     }
-    .event-box {
-  margin-top: 30px;
-  padding: 20px;
-  background: rgba(0,0,0,0.65);
-  border: 2px solid #AA4B00;
-  border-radius: 12px;
-  text-align: center;
-  animation: pulseGlow 2.5s infinite alternate;
-}
-
-.event-box h2 {
-  margin-bottom: 12px;
-  font-size: 18px;
-  color: #ffffff;
-}
-
-.event-box p {
-  font-size: 14px;
-  margin: 8px 0;
-  color: #e0e0e0;
-}
-
-.event-rewards {
-  font-weight: 600;
-  line-height: 1.6;
-}
-
-.limited {
-  margin-top: 12px;
-  font-weight: 700;
-  color: #ffb366;
-}
-
-@keyframes pulseGlow {
-  from {
-    box-shadow: 0 0 10px rgba(200,90,0,0.3);
-  }
-  to {
-    box-shadow: 0 0 25px rgba(200,90,0,0.7);
-  }
-}
-
 
     @keyframes spin {
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
     }
 
+    /* Founder event box */
+    .event-box {
+      margin-top: 28px;
+      padding: 18px;
+      background: rgba(0,0,0,0.65);
+      border: 2px solid #AA4B00;
+      border-radius: 12px;
+      text-align: center;
+      animation: pulseGlow 2.5s infinite alternate;
+    }
+
+    .event-box h2 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      color: #ffffff;
+      letter-spacing: 0.3px;
+    }
+
+    .event-box p {
+      font-size: 14px;
+      margin: 8px 0;
+      color: #e0e0e0;
+    }
+
+    .event-rewards {
+      font-weight: 600;
+      line-height: 1.6;
+    }
+
+    .limited {
+      margin-top: 10px;
+      font-weight: 700;
+      color: #ffb366;
+    }
+
+    @keyframes pulseGlow {
+      from { box-shadow: 0 0 10px rgba(200,90,0,0.3); }
+      to   { box-shadow: 0 0 25px rgba(200,90,0,0.7); }
+    }
 
     footer {
-      margin-top: 30px;
+      margin-top: 26px;
       font-size: 0.8rem;
       color: #9A9A9A;
     }
@@ -128,42 +123,35 @@
 
     <div class="spinner"></div>
     <div id="status">Asking server nicely to start…</div>
+
     <div class="event-box">
-  <h2>🎉 FOUNDING PLAYERS EVENT – NOW LIVE</h2>
+      <h2>🎉 FOUNDING PLAYERS EVENT – NOW LIVE</h2>
+      <p>To celebrate our launch, we are introducing an exclusive <strong>Founding Players Event</strong>.</p>
 
-  <p>
-    To celebrate our launch, we are introducing an exclusive
-    <strong>Founding Players Event</strong>.
-  </p>
+      <p class="event-rewards">
+        💰 €100,000 Bonus Starting Cash<br>
+        👑 Permanent Founder Rank<br>
+        ✨ Exclusive [FOUNDER] In-Game Chat Tag<br>
+        🎁 3 Days VIP Trial<br>
+        🏷 Special @💎Founder Discord Role
+      </p>
 
-  <p class="event-rewards">
-    💰 €100,000 Bonus Starting Cash<br>
-    👑 Permanent Founder Rank<br>
-    ✨ Exclusive [FOUNDER] In-Game Chat Tag<br>
-    🎁 3 Days VIP Trial<br>
-    🏷 Special @💎Founder Discord Role
-  </p>
-
-  <p class="limited">
-    ⚠️ LIMITED TO THE FIRST 25 UNIQUE PLAYERS.<br>
-    Once filled, the Founder Rank will be permanently closed.
-  </p>
-</div>
-
-
+      <p class="limited">
+        ⚠️ LIMITED TO THE FIRST 25 UNIQUE PLAYERS.<br>
+        Once the 25 spots are filled, the Founder Rank will be permanently closed.
+      </p>
+    </div>
 
     <footer>
       dutchrp.fun • discord.dutchrp.fun
     </footer>
   </div>
 
-  <!-- Muziek -->
   <audio id="music" loop>
-  <source src="loading.ogg" type="audio/ogg">
-</audio>
+    <source src="loading.ogg" type="audio/ogg">
+  </audio>
 
   <script>
-    /* Nederenglish teksten */
     const messages = [
       "Downloading very legal content…",
       "Asking the server nicely to behave…",
@@ -197,18 +185,14 @@
       status.textContent = messages[Math.floor(Math.random() * messages.length)];
     }, 5000);
 
-    /* Mute knop */
     const audio = document.getElementById("music");
-    // Start music on first user interaction (browser fix)
-document.body.addEventListener("click", () => {
-  audio.play().catch(() => {});
-}, { once: true });
+    document.body.addEventListener("click", () => {
+      audio.play().catch(() => {});
+    }, { once: true });
 
-// GMod auto-play fallback
-window.addEventListener("load", () => {
-  audio.play().catch(() => {});
-});
-
+    window.addEventListener("load", () => {
+      audio.play().catch(() => {});
+    });
   </script>
 
 </body>
