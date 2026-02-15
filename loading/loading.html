@@ -63,6 +63,48 @@
       margin: 0 auto;
       animation: spin 1s linear infinite;
     }
+    .event-box {
+  margin-top: 30px;
+  padding: 20px;
+  background: rgba(0,0,0,0.65);
+  border: 2px solid #AA4B00;
+  border-radius: 12px;
+  text-align: center;
+  animation: pulseGlow 2.5s infinite alternate;
+}
+
+.event-box h2 {
+  margin-bottom: 12px;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.event-box p {
+  font-size: 14px;
+  margin: 8px 0;
+  color: #e0e0e0;
+}
+
+.event-rewards {
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.limited {
+  margin-top: 12px;
+  font-weight: 700;
+  color: #ffb366;
+}
+
+@keyframes pulseGlow {
+  from {
+    box-shadow: 0 0 10px rgba(200,90,0,0.3);
+  }
+  to {
+    box-shadow: 0 0 25px rgba(200,90,0,0.7);
+  }
+}
+
 
     @keyframes spin {
       0% { transform: rotate(0deg); }
@@ -86,6 +128,28 @@
 
     <div class="spinner"></div>
     <div id="status">Asking server nicely to start…</div>
+    <div class="event-box">
+  <h2>🎉 FOUNDING PLAYERS EVENT – NOW LIVE</h2>
+
+  <p>
+    To celebrate our launch, we are introducing an exclusive
+    <strong>Founding Players Event</strong>.
+  </p>
+
+  <p class="event-rewards">
+    💰 €100,000 Bonus Starting Cash<br>
+    👑 Permanent Founder Rank<br>
+    ✨ Exclusive [FOUNDER] In-Game Chat Tag<br>
+    🎁 3 Days VIP Trial<br>
+    🏷 Special @💎Founder Discord Role
+  </p>
+
+  <p class="limited">
+    ⚠️ LIMITED TO THE FIRST 25 UNIQUE PLAYERS.<br>
+    Once filled, the Founder Rank will be permanently closed.
+  </p>
+</div>
+
 
 
     <footer>
