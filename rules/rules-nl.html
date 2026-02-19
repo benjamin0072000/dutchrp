@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>DutchRP – Server Rules</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="../favicon-32x32.png" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: url("../dutchrpbackgroundsmallerdots.jpg") center/cover no-repeat fixed;
+      color: #fff;
+    }
+
+    /* NAVBAR (match info.html) */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background: rgba(0,0,0,0.6);
+      backdrop-filter: blur(6px);
+    }
+
+    .nav-left,
+    .nav-center,
+    .nav-right {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-center {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .nav-links a {
+      margin-right: 25px;
+      text-decoration: none;
+      color: #ddd;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover {
+      color: #fff;
+    }
+
+    .btn-orange {
+      background: linear-gradient(180deg, #c45a00, #8f3f00);
+      padding: 12px 20px;
+      border-radius: 6px;
+      color: #fff;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-decoration: none;
+      text-align: center;
+      cursor: pointer;
+      display: inline-block;
+      white-space: nowrap;
+    }
+
+    .btn-orange:hover {
+      background: linear-gradient(180deg, #ff7a00, #aa4b00);
+      box-shadow: 0 0 15px rgba(170, 75, 0, 0.6);
+    }
+
+    /* HERO (match info.html) */
+    .hero {
+      text-align: center;
+      padding: 90px 20px 60px;
+    }
+
+    .title {
+      font-size: clamp(32px, 5vw, 56px);
+      font-weight: 800;
+    }
+
+    .highlight {
+      color: #AA4B00;
+    }
+
+    .subtitle {
+      margin-top: 10px;
+      color: #ccc;
+      font-size: 22px;
+    }
+
+    /* CONTENT WRAPPER */
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 20px 70px;
+    }
+
+    /* RULE CARDS (align with info cards vibe) */
+    .rule-section {
+      background: rgba(20,20,20,0.8);
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 0 30px rgba(0,0,0,0.6);
+      margin-bottom: 25px;
+    }
+
+    .rule-section h2 {
+      color: #AA4B00;
+      margin-bottom: 12px;
+      font-size: 20px;
+      letter-spacing: 0.5px;
+    }
+
+    .rule-section ul {
+      padding-left: 18px;
+    }
+
+    .rule-section li {
+      color: #ccc;
+      font-size: 14px;
+      line-height: 1.35;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 35px;
+      font-size: 0.9rem;
+      color: #b7b7b7;
+    }
+
+    /* Responsive navbar */
+    @media (max-width: 820px) {
+      .navbar {
+        padding: 14px 16px;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+      .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 16px;
+      }
+      .nav-links a {
+        margin-right: 0;
+      }
+      .btn-orange {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+<div class="navbar">
+  <div class="nav-left">
+    <div class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="https://discord.dutchrp.fun/" target="_blank">Discord</a>
+      <a href="../info/info.html">Info</a>
+      <a href="../rules/rules.html">Rules</a>
+      <a href="https://dutchrp.tip4serv.com/" target="_blank">Store</a>
+    </div>
+  </div>
+
+  <div class="nav-center">
+    <a href="rules.html" class="btn-orange">ENGLISH VERSION</a>
+  </div>
+
+  <div class="nav-right">
+    <a href="steam://run/4000//+connect 164.152.123.222:27035/" class="btn-orange">JOIN US</a>
+  </div>
+</div>
+
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1 class="title">DutchRP <span class="highlight">Rules</span></h1>
+    <p class="subtitle">Door het spelen op DutchRP ga je akkoort met deze regels.</p>
+  </section>
+
+  <!-- RULES -->
+  <div class="container">
+
+<div class="rule-section">
+  <h2>1. Community & Gedrag</h2>
+  <ul>
+    <li>Behandel alle spelers en staff met respect. Racisme, seksisme, haatspraak of overmatige toxiciteit wordt niet getolereerd.</li>
+    <li>Volg altijd de instructies van staff. Ben je het ergens niet mee eens? Maak een Discord ticket aan en discussieer niet in de publieke chat.</li>
+    <li>Het misbruiken van bugs, glitches of loopholes is verboden. Meld deze via een Discord ticket.</li>
+    <li>Cheaten, hacken, scripten of het gebruiken van oneerlijke voordelen is verboden.</li>
+    <li>Gebruik je gezonde verstand.</li>
+  </ul>
+</div>
+
+<div class="rule-section">
+  <h2>2. Roleplay Richtlijnen</h2>
+  <ul>
+    <li>Geen RDM (Random Deathmatch). Je moet altijd een geldige roleplay reden hebben om iemand te doden.</li>
+    <li>Geen NLR (New Life Rule). Na je dood mag je 5 minuten niet terugkeren naar dezelfde situatie.</li>
+    <li>Geen FailRP. Je acties moeten logisch zijn binnen de roleplay.</li>
+    <li>Geen Metagaming. Gebruik geen OOC informatie (Discord, streams, etc.) in-character.</li>
+    <li>Geen Powergaming. Dwing geen onrealistische acties of uitkomsten af bij andere spelers.</li>
+    <li>FearRP geldt altijd. Je moet je leven waarderen wanneer je wordt bedreigd.</li>
+    <li>Gebruik /advert voordat je gaat raiden, muggen, kidnappen of een waarschuwing geeft.</li>
+    <li>Voordat je iemand doodt wegens hinderlijk gedrag, moet je 3 duidelijke advert-waarschuwingen geven.</li>
+  </ul>
+</div>
+
+<div class="rule-section">
+  <h2>3. Criminele Acties & Limieten</h2>
+  <ul>
+    <li>Kidnap losgeld limiet: Burgers maximaal €10.000 — Burgemeester maximaal €25.000.</li>
+    <li>Mug limiet: maximaal €5.000 met een cooldown van 15 minuten.</li>
+    <li>Het counteren van events (raid, mugging, kidnapping) is niet toegestaan.</li>
+    <li>Disconnecten tijdens een raid om consequenties te ontwijken is verboden.</li>
+  </ul>
+</div>
+
+<div class="rule-section">
+  <h2>4. Raids & Combat Regels</h2>
+  <ul>
+    <li>KOS is alleen toegestaan wanneer dit duidelijk staat aangegeven met een zichtbare bordering.</li>
+    <li>Je mag niet dezelfde speler of base binnen 30 minuten opnieuw raiden.</li>
+    <li>Help niet mee aan raids tenzij je duidelijk bij de groep hoort (bijvoorbeeld via naam/tag).</li>
+    <li>Beëindig raids met "/advert Raid Ended" (inclusief gangnaam indien van toepassing).</li>
+    <li>Bouwen tijdens raids is niet toegestaan. PD moet zich vooraf voorbereiden.</li>
+    <li>Raid geen spelers die actief aan het bouwen zijn met een geldige building sign.</li>
+    <li>Politie adverteert geen raids — zij moeten een geldig warrant hebben.</li>
+    <li>Gebruik een raid niet als excuus om onnodig te doden.</li>
+    <li>Politie moet visueel bewijs hebben voor een warrant. Aannames of sparks door muren tellen niet.</li>
+    <li>Politie mag geen hulp krijgen van niet-overheidsjobs tijdens raids.</li>
+    <li>Je mag PD alleen raiden met een geldige RP reden.</li>
+    <li>Bemoei je niet met raids waar je geen onderdeel van bent.</li>
+  </ul>
+</div>
+
+<div class="rule-section">
+  <h2>5. Bouw & Base Regels</h2>
+  <ul>
+    <li>Geen prop blocking, prop killing, prop pushing of prop climbing.</li>
+    <li>Blokkeer geen publieke gebieden of straten (tenzij een PD checkpoint is goedgekeurd door een Admin).</li>
+    <li>Je base moet minimaal één duidelijke en toegankelijke ingang hebben.</li>
+    <li>Geen trap bases. Spelers moeten dezelfde weg naar buiten kunnen gebruiken als waar ze binnenkwamen.</li>
+    <li>Geen crouch ingangen, tunnels, doolhoven, kill boxes of kleurkamers.</li>
+    <li>Geen verborgen of niet-zichtbare no-collided muren.</li>
+    <li>Geen no-collided ingangen. De hoofdingang moet een zichtbare deur of fading door zijn.</li>
+    <li>Geen roof bases. Je base moet zich binnen een gebouw bevinden.</li>
+    <li>Geen oneerlijke verdediging waarbij raiders niet kunnen terugslaan.</li>
+    <li>Maximaal 3 fading doors per base (exclusief shooting windows).</li>
+    <li>Fading door hold time moet 5 seconden zijn.</li>
+    <li>Maximaal 1 fake keypad per fading door. Keypads moeten zichtbaar en dichtbij de deur zijn.</li>
+    <li>Shooting windows moeten minimaal 3x3 standaard prop formaat zijn en 4 seconden open blijven tijdens combat.</li>
+    <li>De fading door tool is alleen bedoeld voor deuren, niet voor bruggen of exploit builds.</li>
+    <li>Een building sign is toegestaan tijdens het bouwen, maar je mag dan geen printers of illegale items in je base hebben.</li>
+  </ul>
+</div>
+
+<div class="rule-section">
+  <h2>6. Jobs & Misbruik</h2>
+  <ul>
+    <li>Speel je job zoals bedoeld.</li>
+    <li>Geen job abuse (wisselen van job om voordeel te behalen).</li>
+    <li>Lees altijd je job description voor extra regels.</li>
+    <li>Overheidscorruptie is alleen toegestaan wanneer je wordt omgekocht door Mocro Mafia leden.</li>
+  </ul>
+</div>
+
+<div class="rule-section">
+  <h2>7. Overheid & Politie Regels</h2>
+  <ul>
+    <li>De Police Chief leidt de PD en rapporteert aan de Mayor.</li>
+    <li>Het niet opvolgen van bevelen van je meerdere wordt gezien als FailRP en kan leiden tot demotie.</li>
+    <li>PD mag alleen KOS gebruiken bij een gewapende en directe dreiging.</li>
+    <li>Random weapon checks zijn niet toegestaan.</li>
+    <li>PD mag geen privédeuren bezitten.</li>
+    <li>De eerste PD deur moet open blijven, tenzij er een lockdown actief is.</li>
+    <li>Overheidsmedewerkers mogen geen hits plaatsen.</li>
+    <li>Het uitlokken van situaties om een raid te rechtvaardigen is verboden.</li>
+  </ul>
+</div>
+
+<div class="rule-section">
+  <h2>8. Communicatie</h2>
+  <ul>
+    <li>Alleen Engels en Nederlands.</li>
+    <li>Geen spam in voice of chat.</li>
+    <li>Geen reclame maken voor andere servers of diensten.</li>
+    <li>Geen chain advertising.</li>
+  </ul>
+</div>
+
+<div class="rule-section">
+  <h2>9. Job Specifieke Regels</h2>
+  <ul>
+    <li>Hooligan rival groups mogen elkaar vrij RDM'en.</li>
+    <li>Street Artists mogen een publiek podium bouwen.</li>
+    <li>Terroristen zijn KOS en mogen 1 uur lang de job niet opnieuw nemen na hun dood.</li>
+    <li>Hobos mogen worden gearresteerd voor openbaar urineren na een waarschuwing.</li>
+    <li>Gun Dealers mogen alleen selfsupply doen wanneer er geen andere dealer online is (1 wapen, geen shipments).</li>
+  </ul>
+</div>
+
+<div class="rule-section">
+  <h2>10. Laatste Opmerking</h2>
+  <ul>
+    <li>Verander je custom job naam niet op een manier die de rol verkeerd weergeeft.</li>
+    <li>Bunnyhopping om sneller te bewegen is niet toegestaan.</li>
+    <li>Deze regels gelden voor iedereen, inclusief staff.</li>
+    <li>Regels kunnen worden aangepast. Het is je eigen verantwoordelijkheid om op de hoogte te blijven.</li>
+  </ul>
+</div>
+
+    <footer>
+      © 2026 DutchRP • discord.dutchrp.fun
+    </footer>
+
+  </div>
+
+</body>
+</html>
